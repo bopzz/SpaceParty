@@ -21,9 +21,9 @@ function firing_bullet(x, y, rotation, number, type){
 }
 
 function keyPressed() {
-  if(keyCode==87){  // Bắn mỗi viên mỗi lần bấm của tàu 1 (Nút w)
+  if(keyCode==87){ 
     let player = players[0];
-    if(player.special_ammo>0&&player.state<=1){
+    if(player.special_ammo > 0 && player.state <= 1){
       if(player.type_special_ammo!="side-cannons"){
         firing_bullet(player.posX, player.posY, player.rotation, player.order, player.type_special_ammo);
         player.special_ammo--;
@@ -36,7 +36,7 @@ function keyPressed() {
         player.type_special_ammo = "normal";
       }
     }
-    else if(player.normal_ammo>0&&player.state<=1){
+    else if(player.normal_ammo > 0 && player.state <= 1){
       if(!player.side_cannons)
         firing_bullet(player.posX, player.posY, player.rotation, player.order, player.type_special_ammo);
       else{
@@ -49,9 +49,9 @@ function keyPressed() {
       player.normal_ammo--;
     }
   }
-  if(keyCode==220){  // Bắn mỗi viên mỗi lần bấm của tàu 2 (Nút \)
+  if(keyCode==220){
     let player = players[1];
-    if(player.special_ammo>0&&player.state<=1){
+    if(player.special_ammo > 0 && player.state <= 1){
       if(player.type_special_ammo!="side-cannons"){
         firing_bullet(player.posX, player.posY, player.rotation, player.order, player.type_special_ammo);
         player.special_ammo--;
@@ -64,7 +64,7 @@ function keyPressed() {
         player.type_special_ammo = "normal";
       }
     }
-    else if(player.normal_ammo>0&&player.state<=1){
+    else if(player.normal_ammo > 0 && player.state <= 1){
       if(!player.side_cannons)
         firing_bullet(player.posX, player.posY, player.rotation, player.order, player.type_special_ammo);
       else{
@@ -77,9 +77,9 @@ function keyPressed() {
       player.normal_ammo--;
     }
   }
-  if(keyCode==75&&number_of_players>=3){  // Bắn mỗi viên mỗi lần bấm của tàu 3 (Nút k)
+  if(keyCode==75 && number_of_players>=3){
     let player = players[2];
-    if(player.special_ammo>0&&player.state<=1){
+    if(player.special_ammo>0 && player.state<=1){
       if(player.type_special_ammo!="side-cannons"){
         firing_bullet(player.posX, player.posY, player.rotation, player.order, player.type_special_ammo);
         player.special_ammo--;
@@ -105,7 +105,7 @@ function keyPressed() {
       player.normal_ammo--;
     }
   }
-  if(keyCode==86&&number_of_players==4){  // Bắn mỗi viên mỗi lần bấm của tàu 4 (Nút v)
+  if(keyCode==86&&number_of_players==4){
     let player = players[3];
     if(player.special_ammo>0&&player.state<=1){
       if(player.type_special_ammo!="side-cannons"){

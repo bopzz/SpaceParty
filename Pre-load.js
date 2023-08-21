@@ -4,7 +4,7 @@ let reverse_png, mine_png, scatter_png, laser_png;
 
 let all_Ships = [[], [], [], []];
 
-function preload(){   // Lấy hình ảnh và kiểu chữ từ assets
+function preload(){ 
 
   normal_bullet_png = loadImage("https://i.imgur.com/ycBN3Cu.png")
   mine_bullet_png = loadImage("https://i.imgur.com/L0Hlgkb.png")
