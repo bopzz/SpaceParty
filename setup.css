@@ -1,0 +1,74 @@
+@font-face{
+    font-family: gamingFont;
+    src: url(assets/press-start-2p-font/PressStart2P-vaV7.ttf);
+}
+
+@keyframes moving-down{
+    from{top:-100px;}
+    to{top:184px}
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    -webkit-user-select: none;
+    margin: 0;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#animated-down{
+    animation-duration: 4s;
+    animation-name: moving-down;
+}
+
+span{
+    display: inline-block;
+    font-family: gamingFont;
+    color: white;
+    text-shadow: 0 2px black;
+}
+
+span.displaying{
+    color: rgb(255, 68, 0);
+    font-size: 70px;
+    text-shadow: 0 6px black;
+}
+
+p{
+    text-shadow: 0 2px black;
+    font-family: gamingFont;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+button{
+    display: inline-block;
+    text-shadow: 0 2px black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: gamingFont;
+    background-color: rgb(255, 68, 0);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 6px rgb(128, 34, 0);
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: rgb(182, 48, 0);
+}
+
+button:active{
+    background-color: rgb(182, 48, 0);
+    transform: translateY(3px);
+    box-shadow: 0 3px rgb(128, 34, 0);
+}
